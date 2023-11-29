@@ -1,10 +1,10 @@
 <?php
 class Song{
-    private $ID;
-    private $name;
-    private $artist;
-    private $trackNumber;
-    private $duration;
+    public $ID;
+    public $name;
+    public $artist;
+    public $trackNumber;
+    public $duration;
 
     public function __construct($ID, $name, $artist, $trackNumber, $duration)
     {

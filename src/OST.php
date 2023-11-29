@@ -1,10 +1,10 @@
 <?php
 class OST{
-    private $ID;
-    private $name;
-    private $gameName;
-    private $releaseYear;
-    private $trackList = [];
+    public $ID;
+    public $name;
+    public $gameName;
+    public $releaseYear;
+    public $trackList = [];
 
     public function __construct($ID, $name, $gameName, $releaseYear, $trackList)
     {
