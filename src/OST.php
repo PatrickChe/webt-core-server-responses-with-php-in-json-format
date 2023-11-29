@@ -1,12 +1,10 @@
 <?php
-require_once('Song.php');
-
 class OST{
     private $ID;
     private $name;
     private $gameName;
     private $releaseYear;
-    private $trackList;
+    private $trackList = [];
 
     public function __construct($ID, $name, $gameName, $releaseYear, $trackList)
     {

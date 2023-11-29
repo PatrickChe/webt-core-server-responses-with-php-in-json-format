@@ -1,5 +1,5 @@
 <?php
-class song{
+class Song{
     private $ID;
     private $name;
     private $artist;
@@ -24,7 +24,7 @@ class song{
     }
 
     public function get_artist(): String{
-        return $this->ID;
+        return $this->artist;
     }
 
     public function get_tracknumber(): int{
