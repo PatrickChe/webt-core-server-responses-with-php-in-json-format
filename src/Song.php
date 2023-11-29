@@ -1,10 +1,10 @@
 <?php
-class Song{
-    public $ID;
-    public $name;
-    public $artist;
-    public $trackNumber;
-    public $duration;
+class Song implements JsonSerializable{
+    private $ID;
+    private $name;
+    private $artist;
+    private $trackNumber;
+    private $duration;
 
     public function __construct($ID, $name, $artist, $trackNumber, $duration)
     {
@@ -33,6 +33,17 @@ class Song{
 
     public function get_duration(): int{
         return $this->duration;
+    }
+
+    public function jsonSerialize()
+    {
+        return [
+            'ID' => $this->ID,
+            'name' => $this->name,
+            'artist' => $this->artist,
+            'trackNumber' => $this->trackNumber,
+            'duration' => $this->duration,
+        ];
     }
 }
 ?>

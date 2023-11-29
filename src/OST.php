@@ -1,10 +1,10 @@
 <?php
-class OST{
-    public $ID;
-    public $name;
-    public $gameName;
-    public $releaseYear;
-    public $trackList = [];
+class OST implements JsonSerializable{
+    private $ID;
+    private $name;
+    private $gameName;
+    private $releaseYear;
+    private $trackList = [];
 
     public function __construct($ID, $name, $gameName, $releaseYear, $trackList)
     {
@@ -33,6 +33,17 @@ class OST{
 
     public function get_tracklist(): array{
         return $this->trackList;
+    }
+
+    public function jsonSerialize()
+    {
+        return [
+            'ID' => $this->ID,
+            'name' => $this->name,
+            'gameName' => $this->gameName,
+            'releaseYear' => $this->releaseYear,
+            'trackList' => $this->trackList,
+        ];
     }
 }
 ?>
