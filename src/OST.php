@@ -15,7 +15,7 @@ class OST implements JsonSerializable{
         $this->trackList = $trackList;
     }
 
-    public function get_ID(): int{
+    public function get_ID(): String{
         return $this->ID;
     }
 

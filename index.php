@@ -12,7 +12,7 @@ if (isset($_GET['ID'])) {
 
     function retrieveOSTById($ostId, $allOSTs) {
         foreach ($allOSTs as $ost) {
-            if ($ost->ID == $ostId) {
+            if ($ost->get_ID() == $ostId) {
                 return $ost;
             }
         }
